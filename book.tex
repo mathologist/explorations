@@ -2,9 +2,8 @@
 \usepackage{explorations}
 \usepackage[subpreambles=false]{standalone}
 \usepackage{import}
-\usepackage{changepage}
+\usepackage[subfigure]{tocloft}
 
-\newcommand{\mynewpage}{\checkoddpage \ifoddpage \ \clearpage \fi \ \clearpage}
 
 \tikzset{
   piechart/.pic={
@@ -39,7 +38,7 @@
   \vfill
   
   \begin{center}
-    \Large\textsc{San Diego City College\\ Math 59 --- Explorations I\\ Modules 0--7}
+    \Large\textsf{\textsc{San Diego City College\\ Math 59 --- Explorations I\\ Modules 0--7}}
   \end{center}
 
   \vfill
@@ -55,6 +54,9 @@
 % \addtocounter{page}{-1}
 \setcounter{tocdepth}{0}
 \setcounter{secnumdepth}{-2}
+% \renewcommand{\cfttoctitlefont}{\Huge\sffamily\bfseries}
+% \renewcommand{\cftpartfont}{\LARGE\sffamily}
+% \renewcommand{\cftpartpagefont}{\LARGE\sffamily}
 \tableofcontents
 
 \mainmatter
@@ -113,11 +115,13 @@
 \module{Module 1} 
 
 \lesson{1.0.0.1 --- Introduction}
+% \addcontentsline{toc}{chapter}{1.0.0.1 --- Introduction}
 \graphicspath{{module1/1.0.0.1-introduction/}}
 \import{module1/1.0.0.1-introduction/}{1.0.0.1-introduction.tex}
 \mynewpage
 
 \lesson{1.0.0.1 --- Pie Charts}
+% \addcontentsline{toc}{chapter}{1.0.0.2 --- Pie Charts}
 \graphicspath{{module1/1.0.0.2-pie-charts/}}
 \import{module1/1.0.0.2-pie-charts/}{1.0.0.2-pie-charts.tex}
 \mynewpage
@@ -127,8 +131,14 @@
 \import{module1/1.1.2.1-real-numbers/}{1.1.2.1-real-numbers.tex}
 \mynewpage
 
+\lesson{1.2.0.2 --- Money Stacks}
+\graphicspath{{module1/1.2.0.2-money-stacks/}}
+\import{module1/1.2.0.2-money-stacks/}{1.2.0.2-money-stacks.tex}
+\mynewpage
+
 \end{document}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
+%%% TeX-engine: default
 %%% End:

@@ -182,6 +182,7 @@
 \else
   \RequirePackage[T1]{fontenc}
   \RequirePackage{mathpazo}
+  \RequirePackage{helvet}
   \RequirePackage{tgpagella}
   \RequirePackage{microtype}
 \fi
@@ -225,3 +226,7 @@
   per-mode=fraction,
   fraction-function=\nicefrac
 }
+
+\RequirePackage{changepage}
+
+\newcommand{\mynewpage}{\checkoddpage \ifoddpage \ \clearpage \fi \ \clearpage}

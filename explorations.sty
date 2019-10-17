@@ -55,10 +55,11 @@
   \end{tcolorbox}}
 
 \ifexplorations@teacher
-\NewEnviron{teacher}{\BODY}
+\newcommand{\teacher}[1]{{#1}}
 \NewEnviron{notes}{\begin{tcolorbox}[title=Instructor Notes]
     \BODY
   \end{tcolorbox}}
+\newcommand{\student}[1]{}
 % \let\originaltitle\title
 % \renewcommand{\title}[1]{\originaltitle{#1}\chead{\emph{#1 (Instructor Version)}}}
 % \newenvironment{module}[3]{\newpage
@@ -70,8 +71,9 @@
 %   \lhead{\emph{#2}}
 %   \rhead{\emph{#3}}
 %   \chead{\emph{#1}}}{}
-\NewEnviron{teacher}{}
+\newcommand{\teacher}[1]{}
 \NewEnviron{notes}{}
+\newcommand{\student}[1]{{#1}}
 % Change how the title is formatted
 % \let\originaltitle\title
 % \renewcommand{\title}[1]{\originaltitle{#1}\chead{\emph{#1}}}
@@ -86,6 +88,9 @@
 %
 \newcommand{\Rn}{\mathbb{R}}
 \newcommand{\Zn}{\mathbb{Z}}
+\newcommand{\Qn}{\mathbb{Q}}
+\newcommand{\Wn}{\mathbb{W}}
+\newcommand{\Nn}{\mathbb{N}}
 \newcommand{\lapl}{\mathcal{L}}
 \newcommand\half{ \ensuremath{\dfrac{1}{2}} }
 \newcommand\imply{\ensuremath{~\Longrightarrow~}}
@@ -111,6 +116,8 @@
 %\RequirePackage{tgpagella}
 % \RequirePackage{titlesec}
 % \titleformat*{\section}{\bfseries}
+
+\newcommand{\set}[1]{\ensuremath{\left\{ {#1} \right\}}}
 
 \let\originaltitle\title
 \renewcommand{\title}[1]{\originaltitle{#1}\chead{\emph{#1}}}
@@ -178,3 +185,43 @@
   \RequirePackage{tgpagella}
   \RequirePackage{microtype}
 \fi
+
+% Color-blind friendly colors
+\definecolor{cbgray}{HTML}{999999}
+\definecolor{cba}{HTML}{E69F00}
+\definecolor{cbb}{HTML}{56B4E9}
+\definecolor{cbc}{HTML}{009E73}
+\definecolor{cbd}{HTML}{F0E442}
+\definecolor{cbe}{HTML}{0072B2}
+\definecolor{cbf}{HTML}{D55E00}
+\definecolor{cbg}{HTML}{CC79A7}
+
+\newcommand{\ispace}[1]{\setlength{\itemsep}{#1}}
+
+%% \RequirePackage{units}
+\RequirePackage{nicefrac}
+\RequirePackage{siunitx}
+\DeclareSIUnit\inch{in}
+\DeclareSIUnit\in{in}
+
+\DeclareSIUnit\feet{ft}
+\DeclareSIUnit\ft{ft}
+
+\DeclareSIUnit\yard{yd}
+\DeclareSIUnit\yd{yd}
+
+\DeclareSIUnit\mile{mi}
+\DeclareSIUnit\mi{mi}
+
+\DeclareSIUnit\ounce{oz}
+\DeclareSIUnit\oz{oz}
+
+\DeclareSIUnit\pound{lb}
+\DeclareSIUnit\lb{lb}
+
+\DeclareSIUnit\ton{t}
+
+\sisetup{
+  per-mode=fraction,
+  fraction-function=\nicefrac
+}

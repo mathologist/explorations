@@ -4,7 +4,23 @@
 \usepackage{import}
 \usepackage{changepage}
 
-\newcommand{\mynewpage}{\checkoddpage \ifoddpage \clearpage \fi \clearpage}
+\newcommand{\mynewpage}{\checkoddpage \ifoddpage \ \clearpage \fi \ \clearpage}
+
+\tikzset{
+  piechart/.pic={
+    \draw (0,0) circle (2cm);
+    \draw[very thick, fill=cba] (0,0) -- (-90:2) arc(-90:54:2) -- cycle;
+    \node at (-18:1)  {Exams};
+    \draw[very thick, fill=cbb] (0,0) -- (54:2) arc(54:108:2) -- cycle;
+    \node at (81:1.5) {Project};
+    \draw[very thick, fill=cbc] (0,0) -- (108:2) arc(108:162:2) -- cycle;
+    \node at (135:1.4) {\small In class};
+    \draw[very thick, fill=cbd] (0,0) -- (162:2) arc(162:198:2) -- cycle;
+    \node[anchor=west] at (180:2) {HW};
+    \draw[very thick, fill=cbe] (0,0) -- (198:2) arc (198:270:2) -- cycle;
+    \node at (234:1.2) {Final};
+  }
+}
   
 \title{What}
 
@@ -48,6 +64,7 @@
 
 \module{Module 0}
 
+\lesson{0.0.0.1 --- Introduction}
 \graphicspath{{module0/0.0.0.1-introduction/}}
 \lesson{What}
 \import{module0/0.0.0.1-introduction/}{0.0.0.1-introduction.tex}
@@ -94,11 +111,21 @@
 \pagestyle{fancy}
 
 \module{Module 1} 
- 
+
+\lesson{1.0.0.1 --- Introduction}
 \graphicspath{{module1/1.0.0.1-introduction/}}
 \import{module1/1.0.0.1-introduction/}{1.0.0.1-introduction.tex}
 \mynewpage
 
+\lesson{1.0.0.1 --- Pie Charts}
+\graphicspath{{module1/1.0.0.2-pie-charts/}}
+\import{module1/1.0.0.2-pie-charts/}{1.0.0.2-pie-charts.tex}
+\mynewpage
+
+\lesson{1.1.2.1 --- Real Numbers}
+\graphicspath{{module1/1.1.2.1-real-numbers/}}
+\import{module1/1.1.2.1-real-numbers/}{1.1.2.1-real-numbers.tex}
+\mynewpage
 
 \end{document}
 %%% Local Variables:

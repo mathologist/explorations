@@ -1,0 +1,180 @@
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage[table]{xcolor}
+\ProvidesPackage{explorations}[2017/07/09 Formatting for Math Explorations at San Diego City College]
+%
+\RequirePackage{amsfonts,amsmath, amssymb,latexsym}
+\RequirePackage{graphicx,subfigure,graphpap}
+
+\RequirePackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\RequirePackage{tcolorbox}
+\RequirePackage{multicol}
+
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+
+\RequirePackage[nolinks]{qrcode}
+
+\RequirePackage{lastpage}
+\RequirePackage{fancyhdr}
+
+\RequirePackage{booktabs}
+\RequirePackage[normalem]{ulem}
+
+\parindent=0in
+\RequirePackage[margin=1in,left=0.75in,right=0.75in,headheight=1in]{geometry}
+
+
+
+\RequirePackage{array}
+\RequirePackage{enumitem}
+\RequirePackage{calc}
+
+\RequirePackage{wrapfig}
+
+
+
+\RequirePackage{environ}
+\RequirePackage{kvoptions}
+
+% Differentiate between teacher and student versions
+\DeclareBoolOption[true]{teacher}
+\DeclareComplementaryOption{student}{teacher}
+
+\ProcessKeyvalOptions*
+
+\NewEnviron{dfn}{\begin{tcolorbox}[title=Definition]
+    \BODY
+  \end{tcolorbox}}
+
+\ifexplorations@teacher
+\NewEnviron{teacher}{\BODY}
+\NewEnviron{notes}{\begin{tcolorbox}[title=Instructor Notes]
+    \BODY
+  \end{tcolorbox}}
+% \let\originaltitle\title
+% \renewcommand{\title}[1]{\originaltitle{#1}\chead{\emph{#1 (Instructor Version)}}}
+% \newenvironment{module}[3]{\newpage
+%   \lhead{\emph{#2}}
+%   \rhead{\emph{#3}}
+%   \chead{\emph{#1 (Instructor Version)}}}{}
+\else
+% \newenvironment{module}[3]{\newpage
+%   \lhead{\emph{#2}}
+%   \rhead{\emph{#3}}
+%   \chead{\emph{#1}}}{}
+\NewEnviron{teacher}{}
+\NewEnviron{notes}{}
+% Change how the title is formatted
+% \let\originaltitle\title
+% \renewcommand{\title}[1]{\originaltitle{#1}\chead{\emph{#1}}}
+\fi
+
+%\headsep=0in
+\setlength{\unitlength}{1mm}
+%
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+%
+\newcommand{\Rn}{\mathbb{R}}
+\newcommand{\Zn}{\mathbb{Z}}
+\newcommand{\lapl}{\mathcal{L}}
+\newcommand\half{ \ensuremath{\dfrac{1}{2}} }
+\newcommand\imply{\ensuremath{~\Longrightarrow~}}
+\newcommand\dint[2]{ \ensuremath{\displaystyle{\int_{{#1}}^{{#2}}}} }
+\newcommand\px[2]{\ensuremath{~\dfrac{\partial {#1} }{\partial {#2} }~} }
+\newcommand\pxx[2]{\ensuremath{~\dfrac{\partial^2 {#1}}{\partial {#2}^2 }~}}
+\newcommand\pxpy[3]{\ensuremath{~\dfrac{\partial^2 {#1} }{\partial {#2} \partial {#3} }~}}
+\newcommand\dx[1]{\ensuremath{\dfrac{d}{d{#1}}}}
+\newcommand\ddx[1]{\ensuremath{\dfrac{d^2}{d{#1}^2}}}
+\newcommand\Nsum[2]{\ensuremath{\displaystyle{\sum_{#1}^{#2}}}}
+\newcommand\Nlim[1]{\ensuremath{\displaystyle{\lim_{#1}}}}
+\newcommand\Nvec[1]{\ensuremath{{\bf #1}}}
+%
+\newcommand{\eq}[1]{(\ref{#1})}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\beaa}{\begin{eqnarray*}}
+\newcommand{\eeaa}{\end{eqnarray*}}
+%
+%\RequirePackage{mathpazo}
+%\RequirePackage{tgpagella}
+% \RequirePackage{titlesec}
+% \titleformat*{\section}{\bfseries}
+
+\let\originaltitle\title
+\renewcommand{\title}[1]{\originaltitle{#1}\chead{\emph{#1}}}
+\cfoot{\thepage}
+\lfoot{}
+%\rfoot{Page \thepage~of~\pageref{LastPage}}
+\rfoot{}
+
+\renewcommand\headrule{
+  \begin{minipage}{1\textwidth}
+    \hrule width \hsize \kern 1mm \hrule width \hsize \kern 1mm
+  \end{minipage}}
+
+\pagestyle{fancy}
+\AtBeginDocument{\thispagestyle{fancy}}
+
+\newcommand{\module}[1]{\lhead{\emph{#1}}}
+\newcommand{\course}[1]{\rhead{\emph{#1}}}
+\newcommand{\lesson}[1]{\chead{\emph{#1}}}
+\module{}
+\course{}
+\lesson{}
+
+\renewcommand{\descriptionlabel}[1]{%
+  \hspace\labelsep \upshape\bfseries #1:%
+}
+
+\usepackage[parfill]{parskip}
+
+\RequirePackage{newfloat}
+
+\DeclareFloatingEnvironment[
+  fileext=ex,
+  listname={List of Exercises},
+  name=Exercise,
+  placement=tbhp,
+  within=none,
+]{exercise}
+
+\DeclareFloatingEnvironment[
+  fileext=ws,
+  listname={List of Worksheets},
+  name=Worksheet,
+  placement=tbhp,
+  within=none,
+]{worksheet}
+
+%\def\title#1{\gdef\@title{#1}\}
+
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\RequirePackage{iftex}
+
+\ifLuaTeX
+  \usepackage{fontspec}
+  \usepackage{microtype}
+  \usepackage[bold-style=ISO]{unicode-math}
+  \setmainfont[Ligatures={Common,Rare,TeX}]{TeX Gyre Pagella}
+  \setsansfont[Numbers=OldStyle,Scale=MatchLowercase]{TeX Gyre Heros}
+  \setmathfont{TeX Gyre Pagella Math}
+\else
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage{mathpazo}
+  \RequirePackage{tgpagella}
+  \RequirePackage{microtype}
+\fi

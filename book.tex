@@ -1,0 +1,107 @@
+\documentclass{book}
+\usepackage{explorations}
+\usepackage[subpreambles=false]{standalone}
+\usepackage{import}
+\usepackage{changepage}
+
+\newcommand{\mynewpage}{\checkoddpage \ifoddpage \clearpage \fi \clearpage}
+  
+\title{What}
+
+%\let\cleardoublepage\clearpage
+\course{Explorations 1}
+
+\begin{document}
+\frontmatter
+\pagestyle{plain}
+
+
+
+\begin{titlepage}
+  \
+
+  \vfill
+  
+  \begin{center}
+    \Large\textsc{San Diego City College\\ Math 59 --- Explorations I\\ Modules 0--7}
+  \end{center}
+
+  \vfill
+ 
+  \begin{center}
+    \includegraphics{primespiral.pdf}
+  \end{center}
+
+  \vfill
+  
+\end{titlepage}
+
+% \addtocounter{page}{-1}
+\setcounter{tocdepth}{0}
+\setcounter{secnumdepth}{-2}
+\tableofcontents
+
+\mainmatter
+\pagestyle{fancy}
+
+\part{Module 0}
+
+\module{Module 0}
+
+\graphicspath{{module0/0.0.0.1-introduction/}}
+\lesson{What}
+\import{module0/0.0.0.1-introduction/}{0.0.0.1-introduction.tex}
+
+\mynewpage
+
+\thispagestyle{plain}
+\begin{center}
+  \Large People Bingo
+\end{center}
+\begin{itemize}
+\item Find someone who matches each characteristic and ask them to sign in the box.
+\item You can't have the same person sign more than one box on your paper.
+\end{itemize}
+
+\begin{center}
+  \begin{tikzpicture}[x=1in,y=1in,scale=0.9]
+    \draw[step=2in,black,thick] (0,0) grid (8,8);
+    \node[anchor=north, align=center, text width = 1.75in] at (1,8) {Is Married};
+    \node[anchor=north, align=center, text width = 1.75in] at (3,8) {Has Children};
+    \node[anchor=north, align=center, text width = 1.75in] at (5,8) {Lives more than 10 miles from campus};
+    \node[anchor=north, align=center, text width = 1.75in] at (7,8) {Speaks a language other than English};
+    \node[anchor=north, align=center, text width = 1.75in] at (1,6) {Lived outside of the US};
+    \node[anchor=north, align=center, text width = 1.75in] at (3,6) {Plays a musical instrument};
+    \node[anchor=north, align=center, text width = 1.75in] at (5,6) {Wears glasses or contacts};
+    \node[anchor=north, align=center, text width = 1.75in] at (7,6) {Is under 21 years of age};
+    \node[anchor=north, align=center, text width = 1.75in] at (1,4) {Is left-handed};
+    \node[anchor=north, align=center, text width = 1.75in] at (3,4) {Is vegetarian or vegan};
+    \node[anchor=north, align=center, text width = 1.75in] at (5,4) {Works full- or part-time};
+    \node[anchor=north, align=center, text width = 1.75in] at (7,4) {Plays video games};
+    \node[anchor=north, align=center, text width = 1.75in] at (1,2) {Exercises Regularly};
+    \node[anchor=north, align=center, text width = 1.75in] at (3,2) {Does Not Have a Facebook Account};
+    \node[anchor=north, align=center, text width = 1.75in] at (5,2) {Has a January Birthday};
+    \node[anchor=north, align=center, text width = 1.75in] at (7,2) {Other:\\ \ \\ \underline{\hspace{1.5in}}};
+  \end{tikzpicture}
+\end{center}
+
+\newpage
+\thispagestyle{plain}
+\ 
+
+\part{Module 1}
+
+\pagestyle{fancy}
+
+\module{Module 1} 
+ 
+\graphicspath{{module1/1.0.0.1-introduction/}}
+\import{module1/1.0.0.1-introduction/}{1.0.0.1-introduction.tex}
+\mynewpage
+
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

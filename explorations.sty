@@ -230,3 +230,14 @@
 \RequirePackage{changepage}
 
 \newcommand{\mynewpage}{\checkoddpage \ifoddpage \ \clearpage \fi \ \clearpage}
+
+% Some brackets, etc.
+\newcommand{\pqty}[1]{{\left( #1 \right)}}
+\newcommand{\bqty}[1]{{\left[ #1 \right]}}
+\newcommand{\Bqty}[1]{{\left\{ #1 \right\}}}
+\newcommand{\aqty}[1]{{\left\langle #1 \right\rangle}}
+\newcommand{\vqty}[1]{{\left\lvert #1 \right\rvert}}
+\newcommand{\norm}[1]{{\left\lVert #1 \right\rVert}}
+
+% Fancy footnote symbols
+\RequirePackage[symbol]{footmisc}

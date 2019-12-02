@@ -1,0 +1,488 @@
+\documentclass{article}
+
+\usepackage{explorations}
+
+\lesson{Patterns}
+\begin{document}
+\begin{notes}
+\textbf{Learning Objectives:}
+\begin{enumerate}
+\item To identify patterns found in relations between two sets.
+\item To express mathematically the pattern found using variables, and
+  thus make a mathematical relation between two sets via this
+  formula. (i.e. discovering functions and relations)
+\item To understand the need for different formulas in order to get
+  the correct relation between the two sets.
+\item To identify a pattern from 2 inputs to get a desired
+  result. This creates a new binary operator.
+\item To relate this new operator to an algebraic rule between two
+  variables. Students must express this new operator into a
+  mathematical rule.
+\item Students must identify what properties this operator
+  has. Students should address questions regarding the properties of
+  the new operator such as, communtativity, distributivity,
+  associativity, is there an identity element, etc\dots
+\end{enumerate}
+\end{notes}
+
+\begin{quotation}
+  \textbf{``History has demonstrated that the most notable winners usually encountered heartbreaking obstacles before they triumphed. They won because they refused to become
+    discouraged by their defeats.''}
+
+  \ \hfill --- B.C. Forbes
+\end{quotation}
+
+Consider the following table of values.
+
+\begin{wraptable}{l}{0.25\textwidth}
+  \begin{tabular}{|C{0.55in}|C{0.55in}|}
+    \hline \textbf{Input} & \textbf{Output} \\ \hline
+    2 & 2\\ \hline
+                          & 79 \\ \hline
+                          & 14 \\\hline
+    0 & -2 \\ \hline
+    5 & 23 \\ \hline
+    10 & \\ \hline
+    3 & 7 \\ \hline
+  \end{tabular}
+\end{wraptable}
+The idea is to try to find a mathematical rule that you can use
+to take every input listed to get the desired output value.
+
+Start developing a strategy to think about the numbers in the
+table. For example, why don’t we begin by organizing the table
+where the input values are listed in increasing numerical
+order. Note this is just one initial strategy out of many possible
+ones.
+
+So, now we begin to think about what we have to do to every input
+to get the desired output.
+
+\begin{wraptable}{l}{0.25\textwidth}
+  \begin{tabular}{|C{0.55in}|C{0.55in}|}
+    \multicolumn{2}{c}{Ordered Table}\\ \hline
+    \textbf{Input} & \textbf{Output} \\ \hline
+    0 & -2\\ \hline
+    2 & 2\\ \hline
+    3 & 7 \\ \hline
+    5 & 23 \\ \hline
+    10 & \\ \hline
+                   & 14 \\ \hline
+     & 79 \\ \hline
+  \end{tabular}  
+\end{wraptable}
+Here you might want to see if you can come up with a math
+rule and try this rule on a few existing inputs. For example,
+take the input of 3 and if you multiply it by 2 and then add 1
+you get 7. Will this work if you now use the input of 5?
+(5 * 2 + 1 ≠ 23)
+
+Since this didn’t work, you will need to think some more.
+
+Analyze the pair of numbers and try to find clues. Here you will
+see that a big hint comes from the first input of 0.
+
+Notice that whatever you first do to 0, you will have to eventually subtract 2, to get the output of -2. How can we use this information with input of 3? So notice, whatever we do to 3 you will have to subtract 2 eventually. If you subtracted 2 to get 7, that means that before you
+subtracted, you had to have had a 9. That is 9 – 2 = 7, which is our desired output.
+So, now what do you have to first do to three so that you get a 9? The answer is relatively
+simple... You have to multiply 3 by itself: 3 * 3 = 9, then subtracting 2, you get 7!!! Success!!!
+
+Try to apply this same strategy to 5 now.
+
+5*3 – 2 ≠ 23
+
+But once again, look at the desired output of 23. This came from having subtracted something by 2. This means that \underline{\phantom{x}}– 2 = 23; which means \underline{\phantom{x}} had to be 25.
+
+So, what do you have to do to the input of 5 to get to 25?
+
+Is there a pattern that you can recognize between what you did to 3 to eventually get 7, versus what you are now doing to 5 to get to 23?
+
+So, after thinking about this you can see that 5 * 5 – 2 = 23.
+
+What is the pattern now?
+
+First we had 3 * 3 – 2 = 7, and now we have 5 * 5 – 2 = 23.
+
+Before possibly jumping into conclusions with a rule based on ONLY two instances for your
+proposed rule, lets try this pattern on input 2.
+
+The same pattern would be 2 * 2 – 2 = 2, which is indeed the desired output.
+Lets continue testing our conjecture. Lets see if we can now find the input value that would give us an output value of 14, as the table suggests.
+
+Once again, lets use the knowledge that eventually something had to be subtracted by 2, which means that before getting the output result of 14, we first had to have 16, since 16 – 2 = 14.
+
+So, what input value do you think we should use to get output of 14?
+
+If you need to go back once again and review the previous computations, do so at this time.
+
+After some review, you can conclude that the input value had to be 4, since 4 * 4 – 2 = 14.
+
+Now you should be feeling pretty certain that we have a possible rule. One final test remains. That is the output of 79. Can you see that the input value is to be 9? 9 * 9 – 2 = 79.
+
+Finally we can express our rule as follows: input * input – 2 = output.
+
+Lets finish the table. You have one remaining input value to pair up with its output. Here you will see that the output value for the input of 10 is 98.
+
+\textbf{What can you learn about this thought process??}
+
+This is by far the most important part of this entire exercise. You
+need to analyze what needed to happen before we could come up with the
+possible formula. Among the first things that you need to realize is
+that we had to make several erroneous conjectures before we could even
+got close to finding a possible pattern.
+
+We also needed to look very closely for some very specific clues
+within the given inputs and how they relate to their corresponding
+outputs. This can take quite some time to think about. This is
+actually where frustration can occur. You can feel completely clueless
+as to where to even begin to look and how to think. If this is how you
+felt or experienced during this exercise, it is because you did
+develop an initial, systematic strategy to probe into the pattern of
+the numbers. This is by no means uncommon at first. This does not come
+easy, and requires years of practice and work.
+
+So, how can you develop such a thought process? First and foremost,
+because this takes years and years of practice and even more patience,
+you will need to develop what we will call mathematical resilience. It
+requires for you to be creative in your thinking, yet understanding
+that you will not succeed without struggling. Everyone thinks in their
+own unique way. You need to explore by lots of trial and error what
+your way is.
+
+Then after looking closely at the numbers and whatever patterns are
+exhibited, you need to come in with mathematical tools to tackle these
+problems. Among these tools is your knowledge of operations with
+numbers. First of course, we have all the customary arithmetic
+operations, but we also have others, for example multiplying a number
+by itself many times. Like \(3 \cdot 3 \cdot 3 \cdot 3 \cdot 3\) can be expressed with
+exponents as \(3^4\).
+
+We can also think backwards.
+
+For example, to what power do we have to raise the number 3 to in order to get 81?
+Of course that power is 4.  Or to what power do we have to raise 10 to
+in order to get get 1000? Again, that power is now 3.
+
+We can take it even further\dots
+
+For example how can we take an input of 81 and get 9, or an input of
+16 and get 4? Here you can think about this as follows. What number
+raised to the second power is 81? Of course that number is 9 because \(9^2 = 81\). Or what number raised to the second power is 16? And here
+again we see that number is 4 because \(4^2 = 16\). You try it now.
+
+\begin{align*}
+  36 =& \underline{\phantom{xxx}}^2 & 121 =& \underline{\phantom{xxx}}^2  & 196 =& \underline{\phantom{xxx}}^2
+\end{align*}
+
+This is what we also call calculating the square root of a number.
+
+So here you take an input of 81, and you want to find which number
+squared equals 81. That output is 9. Or you take the input of 16, and
+you want to find out what number squared equals 16.  That output is
+4. We also say this as follows. The square root of 81 is 9, or just
+symbolically as \(\sqrt{81} = 9\) or \(\sqrt{16} = 4\).
+
+Here are a few other mathematical tools that you need to keep in the
+forefront when figuring out patterns and operations: Absolute values
+of numbers, reciprocals of numbers, raising numbers to powers higher
+than 2, or raising a specific number to different powers.
+
+Now it is your turn. Take your time with each table and remember,
+trying many things that do not work is part of the learning
+process. So be very patient and persevering.
+
+Puzzle:
+\url{https://youtu.be/XM1NNRNmZ6c} (This video gives an example of this activity)
+
+
+\begin{enumerate}
+\item Find the pattern for the table of values given, fill in the
+  blanks for the remaining open cells of the table and determine the
+  mathematical rule that generates the following outcome with the
+  given input.
+
+  \vfill
+
+  \begin{multicols}{3}
+    \begin{enumerate}
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        0 & 1\\
+        1 & \nicefrac{1}{2}\\ \hline
+        2 & \nicefrac{1}{4}\\ \hline
+        3 & \nicefrac{1}{8}\\ \hline
+                     & 16\\ \hline
+         & \nicefrac{1}{256}\\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        2 & 3 \\ \hline
+        3 & 5\\ \hline
+                 & 11 \\ \hline
+        0 & \\ \hline
+        1 & 1 \\ \hline
+        -10 & \\ \hline
+         & 31 \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        0 & 0 \\ \hline
+        2 & 4 \\ \hline
+        3 & 9 \\ \hline
+        6 & \\ \hline
+        -1 & \\ \hline
+        -7 & 49 \\ \hline
+         & 225 \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+    \end{enumerate}
+  \end{multicols}
+
+  \vfill
+  
+  \begin{multicols}{3}
+    \begin{enumerate}[start=4]
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        -3 & 4\\ \hline
+        3 & 4 \\ \hline
+        5 & 6 \\ \hline
+        -5 & 6 \\ \hline
+        0 & \\ \hline
+                     & 23 \\ \hline
+        -65 & \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        0 & 1 \\ \hline
+        1 & -1 \\ \hline
+        2 & 1 \\ \hline
+        3 & -1 \\ \hline
+        4 & \\ \hline
+        5 & \\ \hline
+        11 & \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        0 & -1\\ \hline
+                     & \nicefrac{1}{4}\\ \hline
+        3 & \nicefrac{1}{2}\\ \hline
+        7 & \nicefrac{1}{6}\\ \hline
+                     & -\nicefrac{1}{2}\\ \hline
+                     & \nicefrac{1}{11} \\ \hline
+        -5 & \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+
+    \end{enumerate}
+  \end{multicols}
+
+  \vfill
+
+  \newpage
+
+  \begin{multicols}{3}
+    \begin{enumerate}[start=7]
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        3 & -9 \\ \hline
+        -4 & 12 \\ \hline
+                     & 18 \\ \hline
+        -2 & 6 \\ \hline
+        \nicefrac{1}{3} & \\ \hline
+                     & 33 \\ \hline
+        & -8 \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+      
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        5 & 30\\ \hline
+        8 & \\ \hline
+                     & 110 \\ \hline
+        -3 & 6\\ \hline
+        7 & 56 \\ \hline
+        -10 & 90 \\ \hline
+        & 240 \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        2 & \nicefrac{1}{4}\\ \hline
+        5 & \nicefrac{1}{25} \\ \hline
+        -3 & \nicefrac{1}{9}\\ \hline
+        100 & \\ \hline
+        -1 & \\ \hline
+                     & 1 \\ \hline
+        & 4 \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+    \end{enumerate}
+  \end{multicols}
+
+  \vspace{0.5in}
+
+  \begin{multicols}{3}
+    \begin{enumerate}[start=10]
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        0 & 0 \\ \hline
+        4 & 2\\ \hline
+        49 & 7 \\ \hline
+        100 & \\ \hline
+        \nicefrac{1}{4} & \\ \hline
+        & \nicefrac{1}{25}  \\ \hline
+        & 4\\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        1 & 1 \\ \hline
+        3 & 9 \\ \hline
+        5 & 81 \\ \hline
+        0 & \nicefrac13 \\ \hline
+        7 & \\ \hline
+                     & \nicefrac{1}{27} \\ \hline
+        -3 & \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+    \item \
+      \begin{tabular}{|C{0.55in}|C{0.55in}|}
+        \hline Input & Output \\ \hline
+        4 & 1\\ \hline
+        64 & 3\\ \hline
+                     & 5\\ \hline
+                     & \nicefrac{1}{2}\\ \hline
+        \nicefrac14 & -1\\ \hline
+        16 & 2 \\ \hline
+        \nicefrac18 & \\ \hline
+      \end{tabular}
+      
+      \vspace{0.25in}
+      
+      Rule:\underline{\hspace{0.7\linewidth}}
+      \columnbreak
+    \end{enumerate}
+  \end{multicols}
+
+  \vspace{0.5in}
+  
+\item Describe fully how you discovered each of the rules above.
+
+  \clearpage
+\item Considering all the rules, what can you say is common among all these rules?
+
+  \vfill
+  
+\item Let the following symbol \(\odot\) represent an operator between
+  two numbers (or two inputs). Find the formula that is represented by
+  this operator.
+
+  \newcommand{\dotrow}[3]{#1 & \odot & #2 & = & #3}
+
+  \begin{multicols}{3}
+    \begin{enumerate}
+    \item
+      \(\begin{array}{|rcrcl|}
+          \hline\dotrow{5}{-3}{5}\\
+          \dotrow{7}{4}{-28}\\
+          \dotrow{-5}{-1}{-5}\\
+          Find: &&&&\\
+          \dotrow{3}{5}{}\\
+          \dotrow{7}{10}{}\\
+          \dotrow{-2}{11}{}\\ \hline
+        \end{array}
+      \)
+    \item
+      \(\begin{array}{|rcrcl|}
+              \hline\dotrow{5}{-3}{5}\\
+              \dotrow{7}{4}{-28}\\
+              \dotrow{-5}{-1}{-5}\\
+              Find: &&&&\\
+              \dotrow{3}{5}{}\\
+              \dotrow{7}{10}{}\\
+              \dotrow{-2}{11}{}\\ \hline
+            \end{array}\)
+            
+          \item
+            \(\begin{array}{|rcrcl|}
+              \hline\dotrow{5}{-3}{5}\\
+              \dotrow{7}{4}{-28}\\
+              \dotrow{-5}{-1}{-5}\\
+              Find: &&&&\\
+              \dotrow{3}{5}{}\\
+              \dotrow{7}{10}{}\\
+              \dotrow{-2}{11}{}\\ \hline
+            \end{array}\)
+    \end{enumerate}
+  \end{multicols}
+  
+\end{enumerate}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -4,6 +4,9 @@
 %
 \RequirePackage{amsfonts,amsmath, amssymb,latexsym}
 \RequirePackage{graphicx,subfigure,graphpap}
+\RequirePackage{longtable}
+\RequirePackage[none]{hyphenat}
+\newcommand{\numrow}[1]{\ensuremath{#1} & & My justification: \newline \vspace{0.1in} \newline Other number sets?\newline \vspace{0.1in}\\ \hline}
 
 \RequirePackage{hyperref}
 
@@ -38,8 +41,6 @@
 \RequirePackage{calc}
 
 \RequirePackage{wrapfig}
-
-
 
 \RequirePackage{environ}
 \RequirePackage{kvoptions}
@@ -168,7 +169,9 @@
 %\def\title#1{\gdef\@title{#1}\}
 
 
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \RequirePackage{iftex}
 

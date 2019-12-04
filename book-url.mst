@@ -1,0 +1,11 @@
+% Input style specifiers
+keyword "\\urlentry"
+% Output style specifiers
+preamble "\\begin{theurls}"
+postamble "\n\\end{theurls}\n"
+group_skip ""
+headings_flag 0
+item_0 "\n\\urlitem{"
+delim_0 "}{"
+delim_t "}"
+line_max 500

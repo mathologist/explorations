@@ -241,3 +241,15 @@
 
 % Fancy footnote symbols
 \RequirePackage[symbol]{footmisc}
+
+\RequirePackage[subfigure]{tocloft}
+
+\newcommand{\listurlname}{List of Links}
+\newlistof{url}{link}{\listurlname}
+
+\RequirePackage{letltxmacro}
+\LetLtxMacro{\oldurl}{\url}
+\renewcommand{\url}[1]{%
+  \refstepcounter{url}
+  \par\noindent\oldurl{#1}
+  \addcontentsline{link}{url}{\protect\oldurl{#1}}}

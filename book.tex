@@ -2,7 +2,7 @@
 \usepackage{explorations}
 \usepackage[subpreambles=false]{standalone}
 \usepackage{import}
-\usepackage[subfigure]{tocloft}
+
 
 
 \tikzset{
@@ -30,8 +30,6 @@
 \frontmatter
 \pagestyle{plain}
 
-
-
 \begin{titlepage}
   \
 
@@ -58,6 +56,8 @@
 % \renewcommand{\cftpartfont}{\LARGE\sffamily}
 % \renewcommand{\cftpartpagefont}{\LARGE\sffamily}
 \tableofcontents
+
+
 
 \mainmatter
 \pagestyle{fancy}
@@ -141,6 +141,9 @@
 \graphicspath{{module1/1.2.0.4-powers-of-two/}}
 \import{module1/1.2.0.4-powers-of-two/}{1.2.0.4-powers-of-two.tex}
 
+\mynewpage
+
+\listofurl
 
 \end{document}
 %%% Local Variables:
